@@ -1,3 +1,9 @@
+// Computer randomly selects a choice
+function getComputerChoice() {
+    const possibleChoices = ['rock','paper','scissors'];
+    const randomChoice = getRandomElement(possibleChoices);
+    return randomChoice;
+}
 
 // Play a round and compare user choice to computer choice
 function playRound (playerSelection, computerSelection) {
