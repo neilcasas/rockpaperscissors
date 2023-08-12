@@ -1,3 +1,9 @@
+let userScore = 0;
+let computerScore = 0;
+
+// Play until either userScore or computerScore reaches 5
+do {
+
 // Computer randomly selects a choice
 function getComputerChoice() {
     const array = ['rock','paper','scissors'];
@@ -58,3 +64,5 @@ const computerSelection = getComputerChoice();
 
 // Play a round
 console.log(playRound(playerSelection,computerSelection));
+
+} while (userScore < 5 || computerScore < 5);
