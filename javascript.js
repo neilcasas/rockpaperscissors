@@ -17,7 +17,7 @@ do {
         
         // If player and computer choice are the same, return tie
         if (playerSelection === computerSelection) {
-            alert('tie!');
+            alert(`Tie! Score - ${userScore} : ${computerScore}`);
 
         // If player choice is rock and computer choice is paper
         } else if (playerSelection === 'rock') {
@@ -25,12 +25,12 @@ do {
 
                 // Add a point to computerScore and return 'Computer wins the round'
                 ++computerScore;
-                alert('Computer wins the round!');
-            
+                alert(`Computer wins the round! Score - ${userScore} : ${computerScore}`);
+
             // Otherwise, add a point to userScore and return 'You win the round'
             } else {
                 ++userScore;
-                alert('You win the round!');
+                alert(`You win the round! Score - ${userScore} : ${computerScore}`);
             }
 
         // If player choice is paper and computer choice is scissors
@@ -39,12 +39,12 @@ do {
 
                 // Add a point to computerScore and return 'Computer wins the round'
                 ++computerScore;
-                alert('Computer wins the round!');
+                alert(`Computer wins the round! Score - ${userScore} : ${computerScore}`);
 
             // Otherwise, add a point to userScore and return 'You win the round'
             } else {
                 ++userScore;
-                alert('You win the round!');
+                alert(`You win the round! Score - ${userScore} : ${computerScore}`);
             }
 
         // If player choice is scissors and computer choice is rock
@@ -53,15 +53,14 @@ do {
 
                 // Add a point to computerScore and return 'Computer wins the round'
                 ++computerScore;
-                alert('Computer wins the round!');
+                alert(`Computer wins the round! Score - ${userScore} : ${computerScore}`);
             
             // Otherwise, add a point to userScore and return 'You win the round'
             } else {
                 ++userScore;
-                alert('You win the round!');
+                alert(`You win the round! Score - ${userScore} : ${computerScore}`);
             }
         }
-        
     }
 
     // Player choice 
@@ -73,12 +72,13 @@ do {
     // Play a round
     playRound(playerSelection,computerSelection);
 
-} while (userScore < 5 || computerScore < 5);
+} while (userScore < 5 && computerScore < 5);
 
 // Check and prompt winner
-if (userScore === 5) {
-    alert('You won!');
-
-} else if (computerScore === 5) {
-    alert('The computer won!');
+if (userScore > computerScore) {
+     alert('You win the game!');
+} else if (userScore < computerScore) {
+    alert('Computer wins the game!');
+} else {
+    alert('Its a tie!');
 }
