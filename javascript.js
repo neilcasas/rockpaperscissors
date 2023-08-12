@@ -17,20 +17,20 @@ do {
         
         // If player and computer choice are the same, return tie
         if (playerSelection === computerSelection) {
-            return 'tie!';
+            alert('tie!');
 
         // If player choice is rock and computer choice is paper
         } else if (playerSelection === 'rock') {
             if (computerSelection === 'paper') {
 
                 // Add a point to computerScore and return 'Computer wins the round'
-                computerScore += 1;
-                return 'Computer wins the round!';
+                ++computerScore;
+                alert('Computer wins the round!');
             
             // Otherwise, add a point to userScore and return 'You win the round'
             } else {
-                userScore += 1;
-                return 'You win the round!';
+                ++userScore;
+                alert('You win the round!');
             }
 
         // If player choice is paper and computer choice is scissors
@@ -38,13 +38,13 @@ do {
             if (computerSelection === 'scissors') {
 
                 // Add a point to computerScore and return 'Computer wins the round'
-                computerScore += 1;
-                return 'Computer wins the round';
+                ++computerScore;
+                alert('Computer wins the round!');
 
             // Otherwise, add a point to userScore and return 'You win the round'
             } else {
-                userScore += 1;
-                return 'You win the round!';
+                ++userScore;
+                alert('You win the round!');
             }
 
         // If player choice is scissors and computer choice is rock
@@ -52,16 +52,16 @@ do {
             if (computerSelection === 'rock') {
 
                 // Add a point to computerScore and return 'Computer wins the round'
-                computerScore += 1;
-                return 'Computer wins the round';
+                ++computerScore;
+                alert('Computer wins the round!');
             
             // Otherwise, add a point to userScore and return 'You win the round'
             } else {
-                userScore += 1;
-                return 'You win the round';
+                ++userScore;
+                alert('You win the round!');
             }
         }
-        console.log(`Computer score: ${computerScore}, User score: ${userScore}`);
+        
     }
 
     // Player choice 
@@ -71,13 +71,14 @@ do {
     const computerSelection = getComputerChoice();
 
     // Play a round
-    console.log(playRound(playerSelection,computerSelection));
+    playRound(playerSelection,computerSelection);
 
 } while (userScore < 5 || computerScore < 5);
 
 // Check and prompt winner
 if (userScore === 5) {
-    console.log('You won!');
+    alert('You won!');
+
 } else if (computerScore === 5) {
-    console.log('The computer won!');
+    alert('The computer won!');
 }
