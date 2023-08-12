@@ -44,6 +44,12 @@ function playRound (playerSelection, computerSelection) {
     }
 }
 
+
+// Player choice 
 const playerSelection = "rock";
+
+// Assign computerSelection to the result of getComputerChoice()
 const computerSelection = getComputerChoice();
+
+// Play a round
 console.log(playRound(playerSelection,computerSelection));
