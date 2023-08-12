@@ -22,11 +22,13 @@ function playRound (playerSelection, computerSelection) {
     } else if (playerSelection === 'rock') {
         if (computerSelection === 'paper') {
 
-            // Return 'Computer wins the round'
+            // Add a point to computerScore and return 'Computer wins the round'
+            computerScore += 1;
             return 'Computer wins the round!';
         
-         // Otherwise, return 'you win the round'
+         // Otherwise, add a point to userScore and return 'You win the round'
         } else {
+            userScore += 1;
             return 'You win the round!';
         }
 
@@ -34,11 +36,13 @@ function playRound (playerSelection, computerSelection) {
     } else if (playerSelection === 'paper') {
         if (computerSelection === 'scissors') {
 
-            // Return 'computer wins the round'
+            // Add a point to computerScore and return 'Computer wins the round'
+            computerScore += 1;
             return 'Computer wins the round';
 
-        // Otherwise, return 'You win the round'
+        // Otherwise, add a point to userScore and return 'You win the round'
         } else {
+            userScore += 1;
             return 'You win the round!';
         }
 
@@ -46,14 +50,17 @@ function playRound (playerSelection, computerSelection) {
     } else if (playerSelection === 'scissors') {
         if (computerSelection === 'rock') {
 
-            // Return 'computer wins the round'
+            // Add a point to computerScore and return 'Computer wins the round'
+            computerScore += 1;
             return 'Computer wins the round';
         
-        // Otherwise, return 'You win the round'
+        // Otherwise, add a point to userScore and return 'You win the round'
         } else {
+            userScore += 1;
             return 'You win the round';
         }
     }
+    console.log(`Computer score: ${computerScore}, User score: ${userScore}`);
 }
 
 // Player choice 
@@ -66,3 +73,9 @@ const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection,computerSelection));
 
 } while (userScore < 5 || computerScore < 5);
+
+if (userScore === 5) {
+    console.log('You won!');
+} else if (computerScore === 5) {
+    console.log('The computer won!');
+}
