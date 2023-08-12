@@ -70,7 +70,7 @@ do {
     const computerSelection = getComputerChoice();
 
     // Play a round
-    playRound(playerSelection,computerSelection);
+    playRound(playerSelection.toLowerCase(),computerSelection);
 
 } while (userScore < 5 && computerScore < 5);
 
