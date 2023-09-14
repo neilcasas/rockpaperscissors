@@ -7,6 +7,10 @@ const play = document.querySelector('.play');
 // Initialize score container
 const scoreContainer= document.querySelector('.score-container');
 
+// Initialize user and computer choice display
+const computerChoiceDisplay = document.querySelector('.computer-choice');
+const playerChoiceDisplay = document.querySelector('.player-choice');
+
 // Initialize userScore and computerScore
 let userScore = 0;
 let computerScore = 0;
@@ -35,6 +39,10 @@ function playRound(playerSelection) {
         ++computerScore;
         scoreContainer.textContent = `Computer wins the round! Score - ${userScore} : ${computerScore}`;
     }
+
+    // Display user and computer choice
+    playerChoiceDisplay.textContent = `You chose ${playerSelection}`;
+    computerChoiceDisplay.textContent = `Computer chose ${computerSelection}`;
 
     // Check and prompt winner
     if (userScore >= 5) {
