@@ -21,3 +21,8 @@ div.body {
 div.footer {
     flex: 0;
 }
+
+.play-container {
+    display: flex;
+    flex-direction: column;
+}
