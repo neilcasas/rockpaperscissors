@@ -29,6 +29,23 @@ div.play-header {
     font-size: 24px;
 }
 
+div.choice-container {
+    display:flex;
+    padding: 50px;
+    gap: 20px;
+}
+div.choice {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    gap: 10px;
+}
+
+img {
+    width:200px;
+}
 div.play-btn-container{
     display: flex;
     justify-content: center;
@@ -36,7 +53,6 @@ div.play-btn-container{
 #play-button {
     background-color: dodgerblue;
     color:white;
-
 }
 
 div.body {
