@@ -65,3 +65,10 @@ rock.addEventListener('click', () => playerSelection = 'rock');
 paper.addEventListener('click', () => playerSelection = 'paper');
 scissors.addEventListener('click', () => playerSelection = 'scissors');
 play.addEventListener('click', () => playRound(playerSelection));
+
+/* Features to implement
+1. Images as Choices
+2. Round Log
+3. Score counter
+4. Create a design 
+*/

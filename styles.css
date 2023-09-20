@@ -1,3 +1,6 @@
+* {
+    border: 2px dotted red;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -6,11 +9,34 @@ body {
     height: 100vh; 
     margin: 0; 
     padding: 0;
-    border: 2px dotted red;
 }
 
 div.header {
     flex: 0;
+}
+
+div.header-text {
+    font-family: monospace;
+    font-size: 64px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+div.play-header {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 24px;
+}
+
+div.play-btn-container{
+    display: flex;
+    justify-content: center;
+}
+#play-button {
+    background-color: dodgerblue;
+    color:white;
+
 }
 
 div.body {
@@ -26,3 +52,4 @@ div.footer {
     display: flex;
     flex-direction: column;
 }
+
