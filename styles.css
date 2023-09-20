@@ -1,6 +1,7 @@
 * {
-    border: 2px dotted red;
+
 }
+
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +18,7 @@ div.header {
 
 div.header-text {
     font-family: monospace;
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 700;
     padding: 20px;
 }
@@ -26,19 +27,32 @@ div.play-header {
     display: flex;
     justify-content: center;
     font-family: monospace;
-    font-size: 24px;
+    font-size: 36px;
+}
+.play-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border: 2px solid rgb(218, 222, 226);
+    border-radius: 20px;
+
 }
 
 div.choice-container {
-    display:flex;
+    display: flex;
     padding: 50px;
     gap: 20px;
 }
+
 div.choice {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 2px solid rgb(218, 222, 226);
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
     padding:20px;
     gap: 10px;
 }
@@ -46,13 +60,19 @@ div.choice {
 img {
     width:200px;
 }
+
 div.play-btn-container{
     display: flex;
     justify-content: center;
 }
 #play-button {
-    background-color: dodgerblue;
-    color:white;
+    height: 50px;
+    width: 100px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    font-size: 20px;
+    color:rgb(0, 0, 0);
 }
 
 div.body {
@@ -62,10 +82,8 @@ div.body {
 
 div.footer {
     flex: 0;
+    font-family: monospace;
 }
 
-.play-container {
-    display: flex;
-    flex-direction: column;
-}
+
 
