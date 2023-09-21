@@ -26,7 +26,8 @@ div.header-text {
 div.play-header {
     display: flex;
     justify-content: center;
-    font-family: monospace;
+    font-family: Helvetica;
+    font-weight: 600;
     font-size: 36px;
 }
 .play-container {
@@ -35,6 +36,7 @@ div.play-header {
     padding: 50px;
     border: 2px solid rgb(218, 222, 226);
     border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 
 }
 
@@ -48,6 +50,7 @@ div.choice {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 250px;
     align-items: center;
     border: 2px solid rgb(218, 222, 226);
     border-radius: 10px;
@@ -65,7 +68,8 @@ div.choice:hover {
 }
 
 img {
-    width:200px;
+    width:  auto;
+    height: 200px;
 }
 
 div.play-btn-container{
@@ -83,7 +87,7 @@ div.play-btn-container{
 }
 
 #play-button:hover {
-    background-color: white;
+    background-color: rgb(31, 94, 211);
 }
 
 div.body {
