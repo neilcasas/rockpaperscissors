@@ -85,6 +85,7 @@ div.play-btn-container{
     justify-content: center;
 }
 #play-button {
+    align-self: center;
     height: 50px;
     width: 100px;
     border: none;
@@ -107,6 +108,3 @@ div.footer {
     flex: 0;
     font-family: monospace;
 }
-
-
-

@@ -4,12 +4,12 @@ const paper = document.querySelector('.choice-paper');
 const scissors = document.querySelector('.choice-scissors');
 const play = document.querySelector('#play-button');
 
-// Initialize score container
-const resultContainer= document.querySelector('.result-container');
+// Initialize player and computer choice container
+const resultContainer= document.querySelector('.result-display');
 
 // Initialize user and computer choice display
-const computerChoiceDisplay = document.querySelector('.computer-choice');
-const playerChoiceDisplay = document.querySelector('.player-choice');
+const computerChoiceDisplay = document.querySelector('.computer-choice-display');
+const playerChoiceDisplay = document.querySelector('.player-choice-display');
 
 // Initialize userScore and computerScore
 let userScore = 0;
