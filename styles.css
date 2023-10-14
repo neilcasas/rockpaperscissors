@@ -97,7 +97,26 @@ div.play-btn-container{
     color:white
 }
 
+.reset-container {
+    display: flex;
+    align-self: center;
+}
+#reset-button {
+    align-self: center;
+    height: 50px;
+    width: 130px;
+    border: none;
+    border-radius: 10px;
+    background-color: dodgerblue;
+    font-size: 20px;
+    color:white
+}
+
 #play-button:hover {
+    background-color: rgb(31, 94, 211);
+}
+
+#reset-button:hover {
     background-color: rgb(31, 94, 211);
 }
 
