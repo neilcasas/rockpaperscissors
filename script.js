@@ -1,8 +1,9 @@
-// Initialize buttons
+// Initialize choices, play button, and reset container
 const rock = document.querySelector('.choice-rock');
 const paper = document.querySelector('.choice-paper');
 const scissors = document.querySelector('.choice-scissors');
 const play = document.querySelector('#play-button');
+const resetContainer = document.querySelector('.reset-container');
 
 // Initialize player and computer choice container
 const resultContainer= document.querySelector('.result-display');
@@ -48,9 +49,11 @@ function playRound(playerSelection) {
     if (userScore >= 5) {
         resultContainer.textContent = 'You win the game!';
         play.remove();
+        resetContainer.appendChild(resetButton);
     } else if (computerScore >= 5) {
         resultContainer.textContent = 'Computer wins the game!';
         play.remove();
+        resetContainer.appendChild(resetButton);
     }
 }
 
@@ -59,6 +62,16 @@ function resetGame() {
     userScore = 0;
     computerScore = 0;
 }
+
+// Initialize resetButton 
+const resetButton = document.createElement('button');
+resetButton.textContent = 'Reset Game';
+resetButton.id = 'reset-button';
+resetButton.addEventListener('click', () => {
+    resetGame();
+    location.reload();
+});
+
 
 // Add event listeners to the buttons
 rock.addEventListener('click', () => {
