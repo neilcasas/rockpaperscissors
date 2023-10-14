@@ -5,7 +5,7 @@ const scissors = document.querySelector('.choice-scissors');
 const play = document.querySelector('#play-button');
 
 // Initialize score container
-const scoreContainer= document.querySelector('.score-container');
+const resultContainer= document.querySelector('.result-container');
 
 // Initialize user and computer choice display
 const computerChoiceDisplay = document.querySelector('.computer-choice');
@@ -27,17 +27,17 @@ function playRound(playerSelection) {
     const computerSelection = getComputerChoice();
 
     if (playerSelection === computerSelection) {
-        scoreContainer.textContent = `Tie! Score - ${userScore} : ${computerScore}`;
+        resultContainer.textContent = `Tie! Score - ${userScore} : ${computerScore}`;
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
         (playerSelection === 'paper' && computerSelection === 'rock') ||
         (playerSelection === 'scissors' && computerSelection === 'paper')
     ) {
         ++userScore;
-        scoreContainer.textContent = `You win the round! Score - ${userScore} : ${computerScore}`;
+        resultContainer.textContent = `You win the round! Score - ${userScore} : ${computerScore}`;
     } else {
         ++computerScore;
-        scoreContainer.textContent = `Computer wins the round! Score - ${userScore} : ${computerScore}`;
+        resultContainer.textContent = `Computer wins the round! Score - ${userScore} : ${computerScore}`;
     }
 
     // Display user and computer choice
@@ -78,7 +78,7 @@ scissors.addEventListener('click', () => {
 
 // Highlight the clicked choice and remove highlighting from others
 function highlightChoice(choiceElement) {
-    
+
     // Remove .choice-clicked class from all choices
     rock.classList.remove('choice-clicked');
     paper.classList.remove('choice-clicked');
@@ -89,9 +89,3 @@ function highlightChoice(choiceElement) {
 }
 
 play.addEventListener('click', () => playRound(playerSelection));
-
-/* Features to implement
-1. Images as Choices
-2. Round Log
-3. Score counter
-*/

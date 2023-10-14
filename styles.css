@@ -73,6 +73,13 @@ img {
     height: 200px;
 }
 
+.result-container {
+    align-self: center;
+    font-family: monospace;
+    font-size: 18px;
+    padding: 50px;
+}
+
 div.play-btn-container{
     display: flex;
     justify-content: center;
