@@ -26,6 +26,7 @@ div.play-header {
     font-weight: 600;
     font-size: 36px;
 }
+
 .play-container {
     display: flex;
     flex-direction: column;
@@ -75,6 +76,7 @@ img {
 
 .result-container {
     align-self: center;
+    justify-content: center;
     font-family: monospace;
     font-size: 18px;
     padding: 50px;

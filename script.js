@@ -46,11 +46,11 @@ function playRound(playerSelection) {
 
     // Check and prompt winner
     if (userScore >= 5) {
-        scoreContainer.textContent = 'You win the game!';
-        resetGame();
+        resultContainer.textContent = 'You win the game!';
+        play.remove();
     } else if (computerScore >= 5) {
-        scoreContainer.textContent = 'Computer wins the game!';
-        resetGame();
+        resultContainer.textContent = 'Computer wins the game!';
+        play.remove();
     }
 }
 
