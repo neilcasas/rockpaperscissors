@@ -1,8 +1,8 @@
 // Initialize buttons
-const rock = document.querySelector('.choice rock');
-const paper = document.querySelector('.choice paper');
-const scissors = document.querySelector('.choice scissors');
-const play = document.querySelector('.play');
+const rock = document.querySelector('.choice-rock');
+const paper = document.querySelector('.choice-paper');
+const scissors = document.querySelector('.choice-scissors');
+const play = document.querySelector('#play-button');
 
 // Initialize score container
 const scoreContainer= document.querySelector('.score-container');

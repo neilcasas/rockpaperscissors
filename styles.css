@@ -1,7 +1,3 @@
-* {
-
-}
-
 body {
     display: flex;
     flex-direction: column;
@@ -46,7 +42,7 @@ div.choice-container {
     gap: 20px;
 }
 
-div.choice {
+div.choice-rock, .choice-scissors, .choice-paper {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,7 +57,7 @@ div.choice {
     transition: transform 0.5s ease; 
 }
 
-div.choice:hover {
+div.choice-rock:hover, div.choice-scissors:hover, div.choice-paper:hover {
     transform: scale(1.1);
     border: 1px solid   dodgerblue;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
