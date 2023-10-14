@@ -65,7 +65,7 @@ function resetGame() {
 
 // Initialize resetButton 
 const resetButton = document.createElement('button');
-resetButton.textContent = 'Reset Game';
+resetButton.textContent = 'Play Again';
 resetButton.id = 'reset-button';
 resetButton.addEventListener('click', () => {
     resetGame();
