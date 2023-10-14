@@ -57,6 +57,11 @@ div.choice-rock, .choice-scissors, .choice-paper {
     transition: transform 0.5s ease; 
 }
 
+.choice-clicked {
+    background-color: dodgerblue;
+    color: white;
+}
+
 div.choice-rock:hover, div.choice-scissors:hover, div.choice-paper:hover {
     transform: scale(1.1);
     border: 1px solid   dodgerblue;
@@ -87,7 +92,7 @@ div.play-btn-container{
 }
 
 div.body {
-    flex: 1;
+    flex: 1;    
     margin: 20px;
 }
 

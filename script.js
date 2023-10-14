@@ -61,14 +61,37 @@ function resetGame() {
 }
 
 // Add event listeners to the buttons
-rock.addEventListener('click', () => playerSelection = 'rock');
-paper.addEventListener('click', () => playerSelection = 'paper');
-scissors.addEventListener('click', () => playerSelection = 'scissors');
+rock.addEventListener('click', () => {
+    playerSelection = 'rock';
+    highlightChoice(rock);
+});
+
+paper.addEventListener('click', () => {
+    playerSelection = 'paper';
+    highlightChoice(paper);
+});
+
+scissors.addEventListener('click', () => {
+    playerSelection = 'scissors';
+    highlightChoice(scissors);
+});
+
+// Highlight the clicked choice and remove highlighting from others
+function highlightChoice(choiceElement) {
+    
+    // Remove .choice-clicked class from all choices
+    rock.classList.remove('choice-clicked');
+    paper.classList.remove('choice-clicked');
+    scissors.classList.remove('choice-clicked');
+
+    // Add .choice-clicked class to the clicked choice
+    choiceElement.classList.add('choice-clicked');
+}
+
 play.addEventListener('click', () => playRound(playerSelection));
 
 /* Features to implement
 1. Images as Choices
 2. Round Log
 3. Score counter
-4. Create a design 
 */
